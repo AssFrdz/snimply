@@ -1,0 +1,354 @@
+@import "tailwindcss";
+:root{
+    --dark-violet: #2C1542;
+    --light-white:#4E3C60;
+}
+
+[class^="hljs"]{
+    font-family: 'Cascadia Code', monospace;
+}
+
+*:not(code){
+    font-family: 'Inter';
+    color:white;
+}
+
+
+
+body,main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--dark-violet);
+}
+
+
+
+main>*{
+    margin: 2rem auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    position: fixed;
+    z-index:100;
+    background-color: var(--dark-violet);
+    padding:1rem;
+    max-height:5rem;
+}
+
+header .rsx-sociaux{
+    margin: 0;
+}
+
+header .rsx-sociaux img{
+    margin: 1rem;
+}
+
+
+.rsx-sociaux{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.rsx-sociaux-box{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+
+.rsx-sociaux a{
+    margin:1rem;
+}
+
+main{
+    margin-top: 5rem;
+}
+
+
+
+.big-icon{
+    height:3.5rem;
+    width:3.5rem;
+}
+
+.icon{
+    height:1.75rem;
+    width:1.75rem;
+}
+
+.lil-icon{
+    height:1.25rem;
+    width:1.25rem;
+    margin-right:0.5rem;
+}
+
+.langage-choose{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+}
+
+.langage-choose .lil-icon{
+    margin: 0;
+}
+.langage-choose .cta-1-dark {
+    padding: 0.5rem;
+    border-radius: 0.35rem;
+}
+
+.big-title{
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+.lil-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: transparent;
+    outline:none;
+    border:none;
+
+
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem auto;
+    text-align: center;
+
+
+}
+
+p{
+    font-size: 0.9rem;
+    margin:auto;
+    max-width:70%;
+    text-align: center;
+}
+
+.btn-bar .cta-1-dark{
+    margin:0.25rem;
+}
+
+.search-bar input{
+    font-size: 0.9rem;
+    outline: none;
+    border:none;
+    background-color: transparent;
+    width:100%;
+    color:black;
+    padding:1rem;
+}
+
+.search-bar{
+    height:3.5rem;
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.search-bar button{
+    min-height:3rem;
+    min-width:3rem;
+    margin-right: 0.2rem;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    background-color: var(--dark-violet);
+}
+
+.cta-1-dark{
+    padding:0.5rem 1rem;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    background-color: var(--light-white);
+    border-radius: 19.5px;
+    border:1px solid white;
+    font-family: "Cascadia Code";
+}
+
+.cta-1-dark.active, .cta-1-dark:hover {
+    background-color: white;
+    box-shadow: 0px 0px 10px #FFFFFF;
+    color:black;
+}
+
+.cta-1-dark.active i, .cta-1-dark:hover i {
+    color:black;
+}
+
+
+.cta-1-dark i {
+   margin-left:0.25rem;
+}
+
+
+
+
+
+
+
+.flow{
+    margin:auto;
+    display: flex;
+    width:100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-height:200vh;
+    overflow: scroll;
+}
+
+.flow .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:33%;
+    min-width:370px;
+    padding:0.5rem;
+}
+
+.box{
+    display: flex;
+    margin: 1rem auto;
+    flex-direction: column;
+    width: 100%;
+    padding:1rem 2rem;
+    background-color: var(--light-white);
+    border-radius:9px;
+    border:1px solid white;
+
+}
+
+.box .header{
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+}
+
+.box hr{
+    color :white;
+    height: 1px;
+    width:100%;
+    margin:0.5rem auto;
+}
+
+.box .code{
+    width:100%;
+    max-height:25rem;
+    padding:1rem;
+    margin:1rem auto;
+    background-color: var(--dark-violet);
+    font-family: "Cascadia Code";
+
+}
+
+.box p{
+    font-size: 0.8125rem;
+    width:100%;
+    min-width: 100%;
+    margin:1rem  auto;
+    text-align: left;
+}
+
+.box.add {
+    display: flex;
+    flex-direction: column;
+    padding:1rem;
+    height:fit-content;
+    max-width:70%;
+}
+
+.box.add .header{
+    flex-wrap: wrap;
+}
+
+
+
+.box.add .select{
+    display: flex;
+}
+
+.box.add .select *{
+   font-size: 0.9rem;
+}
+
+
+.box.add .select input{
+    margin-left:0.25rem;
+    background-color: var(--light-white);
+    border:1px solid white;
+
+}
+
+.box.add hr{
+    width:50%;
+    margin:1rem 0;
+}
+
+.box.add .middle{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    min-height:15rem;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+
+
+.box.add .middle *{
+    margin:0.25rem;
+    min-width:25rem;
+    max-width: 49%;
+    padding: 1rem;
+    min-height: 20rem;
+}
+
+.box.add .middle textarea:not(.code){
+    color:black;
+    background-color: white;
+    outline:none;
+    border:none;
+   
+}
+
+
+
+
+.box.add .cta-1-dark.active{
+    margin:1rem auto;
+}
+
+.box:not(.add) .cta-1-dark{
+    margin:0rem auto;
+    position: relative;
+    top:2rem;
+   
+}
+
+@media (max-width:700px) {
+
+.box.add{
+    max-width:100%;
+    width:90%;
+}
+   
+.box.add .middle *{
+    min-width:100%;
+}
+    
+}
+
+
+
