@@ -160,18 +160,21 @@
   .flex {
     display: flex;
   }
+  .hidden {
+    display: none;
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
 }
 :root {
-  --dark-violet: #2C1542;
+  --dark-violet: #1b0f27;
   --light-white: #4E3C60;
 }
 [class^="hljs"] {
   font-family: 'Cascadia Code', monospace;
 }
-*:not(code) {
+*:not(.code) {
   font-family: 'Inter';
   color: white;
 }
@@ -356,6 +359,7 @@ p {
 .box .code {
   width: 100%;
   max-height: 25rem;
+  min-height: 15rem;
   padding: 1rem;
   margin: 1rem auto;
   background-color: var(--dark-violet);
@@ -430,6 +434,27 @@ p {
   }
   .box.add .middle * {
     min-width: 100%;
+  }
+  .big-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  .lil-title {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: transparent;
+    outline: none;
+    border: none;
+  }
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  .box.add .middle *, .code {
+    font-size: 0.8rem;
   }
 }
 @property --tw-rotate-x {
